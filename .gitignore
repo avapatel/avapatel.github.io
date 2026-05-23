@@ -1,0 +1,15 @@
+# Mac files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Environment files
+.env
+
+# Dependencies, just in case this becomes a bigger project later
+node_modules/
+
+# Build folders
+dist/
+build/

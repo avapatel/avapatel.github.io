@@ -2,17 +2,197 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Makes the website look right on phones and laptops -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ava Patel | Portfolio</title>
+
+    <!-- Links this HTML file to the CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Ava Patel</h1>
-    <p>My portfolio website is coming soon.</p>
+    <!-- Top navigation bar -->
+    <header class="navbar">
+        <div class="nav-name">Ava Patel</div>
 
-    <h2>Projects</h2>
-    <p>GarnetAndCode, machine learning projects, and more will be added here.</p>
+        <button class="menu-button" id="menuButton">Menu</button>
 
-    <h2>Links</h2>
-    <a href="https://github.com/avapatel">GitHub</a>
+        <nav class="nav-links" id="navLinks">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main hero section -->
+    <main>
+        <section class="hero">
+            <p class="small-heading">Computer Science · AI Concentration · Software Development</p>
+
+            <h1>Hi, I’m Ava Patel.</h1>
+
+            <p class="hero-text">
+                I’m a Computer Science student at the University of South Carolina with an interest in
+                software development, artificial intelligence, data-driven applications, and building
+                projects that solve real problems.
+            </p>
+
+            <div class="hero-buttons">
+                <a class="button primary-button" href="#projects">View Projects</a>
+                <a class="button secondary-button" href="#contact">Contact Me</a>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section class="section" id="about">
+            <h2>About Me</h2>
+
+            <p>
+                I am a Computer Science student with experience working on full-stack applications,
+                data-focused projects, and class projects involving programming, algorithms, artificial
+                intelligence, and software development.
+            </p>
+
+            <p>
+                I enjoy creating projects that combine technical problem-solving with real-world use cases.
+                I am currently building this portfolio to share my work, GitHub projects, and professional
+                background with employers.
+            </p>
+        </section>
+
+        <!-- Projects section -->
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>GarnetAndCode</h3>
+
+                    <p>
+                        A sports prediction web application that uses sports data to generate predictions,
+                        display teams, manage favorites, and track prediction history.
+                    </p>
+
+                    <p class="project-tech">
+                        React · JavaScript · Node.js · Express · MongoDB
+                    </p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/SCCapstone/GarnetAndCode" target="_blank">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3>Machine Learning Investing Project</h3>
+
+                    <p>
+                        A project focused on using data and machine learning concepts to analyze
+                        investment-related information and explore prediction-based decision making.
+                    </p>
+
+                    <p class="project-tech">
+                        Python · Machine Learning · Data Analysis
+                    </p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/avapatel/ROI585Personal" target="_blank">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3>Spanglish Project</h3>
+
+                    <p>
+                        A language-focused project involving Spanish and English communication features,
+                        with an emphasis on usability and implementation.
+                    </p>
+
+                    <p class="project-tech">
+                        JavaScript · HTML · CSS
+                    </p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/avapatel" target="_blank">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3>AI Search and Pacman Projects</h3>
+
+                    <p>
+                        Class projects involving artificial intelligence concepts such as search,
+                        multi-agent behavior, evaluation functions, and reinforcement learning.
+                    </p>
+
+                    <p class="project-tech">
+                        Python · AI · Search Algorithms
+                    </p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/avapatel" target="_blank">GitHub</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Skills section -->
+        <section class="section" id="skills">
+            <h2>Skills</h2>
+
+            <div class="skills-list">
+                <span>Python</span>
+                <span>Java</span>
+                <span>C++</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>Machine Learning</span>
+                <span>Data Analysis</span>
+            </div>
+        </section>
+
+        <!-- Resume section -->
+        <section class="section" id="resume">
+            <h2>Resume</h2>
+
+            <p>
+                My resume includes my technical projects, coursework, work experience, and skills.
+            </p>
+
+            <!-- Upload your resume as resume.pdf for this button to work -->
+            <a class="button primary-button" href="resume.pdf" target="_blank">View Resume</a>
+        </section>
+
+        <!-- Contact section -->
+        <section class="section" id="contact">
+            <h2>Contact</h2>
+
+            <p>
+                I am open to software engineering, technology, and data-related opportunities.
+            </p>
+
+            <div class="contact-links">
+                <a href="mailto:YOUR_EMAIL_HERE">Email</a>
+                <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_HERE" target="_blank">LinkedIn</a>
+                <a href="https://github.com/avapatel" target="_blank">GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Ava Patel. Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <!-- Links this HTML file to the JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
