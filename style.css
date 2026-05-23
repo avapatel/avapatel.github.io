@@ -88,7 +88,8 @@ main {
     width: 280px;
     height: 280px;
     object-fit: cover;
-    border-radius: 50%;
+    object-position: center 30%;
+    border-radius: 0;
     border: 5px solid #73000a;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
 }
@@ -281,12 +282,10 @@ footer {
     }
 
     .headshot {
-        width: 280px;
-        height: 280px;
-        object-fit: cover;
-        border-radius: 14px;
-        border: 5px solid #73000a;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+        width: 220px;
+        height: 220px;
+        object-position: center;
+        border-radius: 0;
     }
 
     .project-grid {
