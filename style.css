@@ -68,6 +68,29 @@ main {
 /* Hero section */
 .hero {
     padding: 90px 0 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text-box {
+    flex: 1;
+}
+
+.hero-image-box {
+    flex: 0.7;
+    display: flex;
+    justify-content: center;
+}
+
+.headshot {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #73000a;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
 }
 
 .small-heading {
@@ -244,10 +267,22 @@ footer {
 
     .hero {
         padding: 60px 0 45px;
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
     }
 
     .hero h1 {
         font-size: 2.4rem;
+    }
+
+    .headshot {
+        width: 220px;
+        height: 220px;
     }
 
     .project-grid {
