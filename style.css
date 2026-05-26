@@ -15,40 +15,80 @@ body {
     line-height: 1.6;
 }
 
-/* Top navigation bar */
-.navbar {
+/* Navbar */
+.navBar {
     position: sticky;
     top: 0;
     z-index: 10;
     background-color: #111;
     color: white;
-    padding: 18px 8%;
+    padding: 14px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 25px;
 }
 
-.nav-name {
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-.nav-links {
+.navLeft {
     display: flex;
-    gap: 22px;
+    align-items: center;
+    gap: 14px;
 }
 
-.nav-links a {
+.navLogo {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.navText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navName {
+    font-size: 1.55rem;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.navSchool {
+    margin-top: 5px;
+    color: white;
+    border: 2px solid #73000a;
+    padding: 3px 9px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.navLinks a {
     color: white;
     text-decoration: none;
     font-size: 0.95rem;
+    font-weight: bold;
+    border: 2px solid #73000a;
+    padding: 8px 13px;
+    border-radius: 8px;
 }
 
-.nav-links a:hover {
-    color: #f1c6cb;
+.navLinks a:hover {
+    background-color: #73000a;
 }
 
-.menu-button {
+.menuButton {
     display: none;
     background-color: #73000a;
     color: white;
@@ -58,15 +98,15 @@ body {
     cursor: pointer;
 }
 
-/* Main page layout */
+/* Main page */
 main {
     width: 84%;
     max-width: 1100px;
     margin: 0 auto;
 }
 
-/* Hero section */
-.hero {
+/* home section */
+.home {
     padding: 90px 0 70px;
     display: flex;
     align-items: center;
@@ -74,27 +114,17 @@ main {
     gap: 50px;
 }
 
-.hero-text-box {
+.homeLeft {
     flex: 1;
 }
 
-.hero-image-box {
+.homeRight {
     flex: 0.7;
     display: flex;
     justify-content: center;
 }
 
-.headshot {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
-    object-position: center 30%;
-    border-radius: 0;
-    border: 5px solid #73000a;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
-}
-
-.small-heading {
+.introLine {
     color: #73000a;
     font-weight: bold;
     text-transform: uppercase;
@@ -102,28 +132,38 @@ main {
     font-size: 0.9rem;
 }
 
-.hero h1 {
+.home h1 {
     font-size: 3.2rem;
     line-height: 1.1;
     margin: 12px 0;
     color: #111;
 }
 
-.hero-text {
+.bigText {
     max-width: 760px;
     font-size: 1.15rem;
     color: #444;
 }
 
-.hero-buttons {
+.headshot {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    object-position: center 40%;
+    border-radius: 0;
+    border: 5px solid #73000a;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+/* Buttons */
+.buttonRow {
     margin-top: 28px;
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
 }
 
-/* General buttons */
-.button {
+.btn {
     display: inline-block;
     padding: 12px 18px;
     border-radius: 10px;
@@ -131,26 +171,26 @@ main {
     font-weight: bold;
 }
 
-.primary-button {
+.darkBtn {
     background-color: #73000a;
     color: white;
 }
 
-.primary-button:hover {
+.darkBtn:hover {
     background-color: #560007;
 }
 
-.secondary-button {
+.lightBtn {
     background-color: white;
     color: #73000a;
     border: 2px solid #73000a;
 }
 
-.secondary-button:hover {
+.lightBtn:hover {
     background-color: #f6e8ea;
 }
 
-/* Standard sections */
+/* Basic white content boxes */
 .section {
     background-color: white;
     padding: 34px;
@@ -165,49 +205,49 @@ main {
     font-size: 1.8rem;
 }
 
-/* Project cards */
-.project-grid {
+/* Projects */
+.projectGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
 }
 
-.project-card {
+.projectCard {
     border: 1px solid #ddd;
     border-radius: 14px;
     padding: 22px;
     background-color: #fafafa;
 }
 
-.project-card h3 {
+.projectCard h3 {
     margin-top: 0;
     color: #73000a;
 }
 
-.project-tech {
+.projectTech {
     font-weight: bold;
     color: #555;
     font-size: 0.95rem;
 }
 
-.project-links a {
+.projectLinks a {
     color: #73000a;
     font-weight: bold;
     text-decoration: none;
 }
 
-.project-links a:hover {
+.projectLinks a:hover {
     text-decoration: underline;
 }
 
 /* Skills */
-.skills-list {
+.skillList {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
 
-.skills-list span {
+.skillList span {
     background-color: #f1e8e9;
     color: #73000a;
     padding: 9px 12px;
@@ -216,20 +256,39 @@ main {
     font-size: 0.92rem;
 }
 
-/* Contact links */
-.contact-links {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
+/* Contact */
+.contactSection p {
+    margin-bottom: 24px;
 }
 
-.contact-links a {
+.contactCard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.contactBox {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.contactBox h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
     color: #73000a;
+}
+
+.contactBox a {
+    color: #222;
     font-weight: bold;
     text-decoration: none;
+    word-break: break-word;
 }
 
-.contact-links a:hover {
+.contactBox a:hover {
+    color: #73000a;
     text-decoration: underline;
 }
 
@@ -240,55 +299,82 @@ footer {
     color: #555;
 }
 
-/* Phone/tablet adjustments */
+/* Phone/tablet layout */
 @media screen and (max-width: 750px) {
-    .navbar {
+    .navBar {
         flex-wrap: wrap;
+        padding: 14px 5%;
     }
 
-    .menu-button {
+    .navLeft {
+        width: 100%;
+    }
+
+    .navLogo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .navName {
+        font-size: 1.3rem;
+    }
+
+    .navSchool {
+        font-size: 0.68rem;
+        padding: 3px 7px;
+    }
+
+    .menuButton {
         display: block;
     }
 
-    .nav-links {
+    .navLinks {
         display: none;
         width: 100%;
         margin-top: 14px;
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
+        align-items: stretch;
     }
 
-    .nav-links.show {
+    .navLinks.show {
         display: flex;
+    }
+
+    .navLinks a {
+        text-align: center;
     }
 
     main {
         width: 90%;
     }
 
-    .hero {
+    .home {
         padding: 60px 0 45px;
         flex-direction: column-reverse;
         text-align: center;
         gap: 25px;
     }
 
-    .hero-buttons {
+    .buttonRow {
         justify-content: center;
     }
 
-    .hero h1 {
+    .home h1 {
         font-size: 2.4rem;
     }
 
     .headshot {
         width: 220px;
         height: 220px;
-        object-position: center;
-        border-radius: 0;
+        object-position: center 40%;
     }
 
-    .project-grid {
+    .projectGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .contactCard {
         grid-template-columns: 1fr;
     }
 
